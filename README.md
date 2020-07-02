@@ -76,4 +76,4 @@ Blade Tabler Icons is developed and maintained by [Ryan Chandler](https://ryangj
 
 ## License
 
-Blade Heroicons is open-sourced software licensed under [the MIT license](LICENSE.md).
+Blade Tabler Icons is open-sourced software licensed under [the MIT license](LICENSE.md).
