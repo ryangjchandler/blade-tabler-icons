@@ -9,7 +9,7 @@ use Illuminate\Support\ServiceProvider;
 
 final class BladeTablerIconsServiceProvider extends ServiceProvider
 {
-    public function boot(): void
+    public function register(): void
     {
         $this->callAfterResolving(Factory::class, function (Factory $factory) {
             $factory->add('tabler', [
@@ -17,7 +17,10 @@ final class BladeTablerIconsServiceProvider extends ServiceProvider
                 'prefix' => 'tabler',
             ]);
         });
-
+    }
+        
+    public function boot(): void
+    {
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../resources/svg' => public_path('vendor/blade-tabler-icons'),
