@@ -9,7 +9,7 @@ RESOURCES=$DIRECTORY/../resources/svg
 echo "Compiling icons..."
 
 for FILE in $DIST/*; do
-  cp $FILE $RESOURCES/$(echo ${FILE##*/})
+    sed -e 's/ class="[^\"]*"//g' -e 's/ width="[^\"]*"//g' -e 's/ height="[^\"]*"//g' -e '/^$/d' $FILE > $RESOURCES/$(echo ${FILE##*/})
 done
 
 echo "All done!"
