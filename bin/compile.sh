@@ -6,16 +6,10 @@ DIRECTORY=$(cd `dirname $0` && pwd)
 DIST=$DIRECTORY/../dist
 RESOURCES=$DIRECTORY/../resources/svg
 
-echo "Compiling outline icons..."
+echo "Compiling icons..."
 
-for FILE in $DIST/outline/*; do
-  cp $FILE $RESOURCES/o-$(echo ${FILE##*/})
-done
-
-echo "Compiling solid icons..."
-
-for FILE in $DIST/solid/*; do
-  cp $FILE $RESOURCES/s-$(echo ${FILE##*/})
+for FILE in $DIST/*; do
+    sed -e 's/ class="[^\"]*"//g' -e '/<path stroke="none" d="M0 0h24v24H0z" fill="none"\/>/d' -e '/^$/d' $FILE > $RESOURCES/$(echo ${FILE##*/})
 done
 
 echo "All done!"
