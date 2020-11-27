@@ -2,9 +2,9 @@
 
 set -e
 
-DIRECTORY=$(cd `dirname $0` && pwd)
-DIST=$DIRECTORY/../dist
-RESOURCES=$DIRECTORY/../resources/svg
+DIRECTORY=$(cd $1 && pwd)
+DIST=$DIRECTORY
+RESOURCES=$DIRECTORY/../../../../resources/svg
 
 echo "Compiling icons..."
 

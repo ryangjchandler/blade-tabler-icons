@@ -42,6 +42,10 @@
     "scripts": {
         "format": [
             "vendor/bin/php-cs-fixer fix"
+        ],
+        "update-icons": [
+            "npm install",
+            "./bin/compile.sh ./node_modules/@tabler/icons/icons"
         ]
     },
     "config": {
