@@ -2,7 +2,7 @@ name: Update Icons
 
 on:
   schedule:
-    - cron: '0 12 * * 0'
+    - cron: '0 */6 * * *'
 
 jobs:
   update:
@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        
+      - name: Update icon
+        run: |
+          npm install
+          ./bin/compile.sh ./node_modules/@tabler/icons/icons
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v2.3.0
