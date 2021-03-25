@@ -46,7 +46,8 @@
         "update-icons": [
             "npm install",
             "./bin/compile.sh ./node_modules/@tabler/icons/icons"
-        ]
+        ],
+        "test": "vendor/bin/phpunit --colors=always"
     },
     "config": {
         "sort-packages": true
