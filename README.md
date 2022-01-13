@@ -3,9 +3,6 @@
 <a href="https://github.com/ryangjchandler/blade-tabler-icons/actions?query=workflow%3ATests">
     <img src="https://github.com/ryangjchandler/blade-tabler-icons/workflows/Tests/badge.svg" alt="Tests">
 </a>
-<a href="https://github.com/ryangjchandler/blade-tabler-icons/actions?query=workflow%3A%22Code+Style%22">
-    <img src="https://github.com/ryangjchandler/blade-tabler-icons/workflows/Code%20Style/badge.svg" alt="Code Style">
-</a>
 <a href="https://packagist.org/packages/ryangjchandler/blade-tabler-icons">
     <img src="https://poser.pugx.org/ryangjchandler/blade-tabler-icons/v/stable.svg" alt="Latest Stable Version">
 </a>
