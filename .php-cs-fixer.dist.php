@@ -5,20 +5,24 @@ $finder = Symfony\Component\Finder\Finder::create()
     ->in(__DIR__)
     ->name('*.php');
 
-return PhpCsFixer\Config::create()
+$config = new PhpCsFixer\Config();
+
+return $config
     ->setRules([
         '@PSR2' => true,
         'array_syntax' => ['syntax' => 'short'],
         'not_operator_with_successor_space' => true,
         'no_extra_blank_lines' => [
-            'curly_brace_block',
-            'extra',
-            'parenthesis_brace_block',
-            'throw',
-            'use',
+            'tokens' => [
+                'curly_brace_block',
+                'extra',
+                'parenthesis_brace_block',
+                'throw',
+                'use',
+            ],
         ],
         'no_unused_imports' => true,
-        'ordered_imports' => ['sortAlgorithm' => 'alpha'],
+        'ordered_imports' => ['sort_algorithm' => 'alpha'],
         'ternary_operator_spaces' => true,
         'single_blank_line_before_namespace' => true,
 
