@@ -1,7 +1,11 @@
 {
     "name": "ryangjchandler/blade-tabler-icons",
     "description": "A package to easily make use of Tabler icons in your Laravel Blade views.",
-    "keywords": ["Blade", "Tabler", "Laravel"],
+    "keywords": [
+        "Blade",
+        "Tabler",
+        "Laravel"
+    ],
     "homepage": "https://github.com/ryangjchandler/blade-tabler-icons",
     "license": "MIT",
     "authors": [
@@ -13,14 +17,14 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "blade-ui-kit/blade-icons": "^1.0",
-        "illuminate/support": "^9.0"
+        "php": "^8.1",
+        "blade-ui-kit/blade-icons": "^1.5",
+        "illuminate/support": "^10.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "orchestra/testbench": "^7.0",
-        "phpunit/phpunit": "^9.0"
+        "friendsofphp/php-cs-fixer": "^3.14",
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "psr-4": {
