@@ -2,10 +2,10 @@ name: Update Tabler Icons
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: "0 0 * * 0"
 
 jobs:
-  download_icons:
+  update-icons:
     runs-on: ubuntu-latest
 
     steps:
