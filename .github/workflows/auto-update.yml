@@ -1,0 +1,23 @@
+name: Update Tabler Icons
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  download_icons:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run auto-update script
+        run: |
+          chmod +x ./bin/auto-update.sh
+          ./bin/auto-update.sh
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Tabler Icons
