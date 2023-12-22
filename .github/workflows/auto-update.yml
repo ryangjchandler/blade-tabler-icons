@@ -2,7 +2,7 @@ name: Update Tabler Icons
 
 on:
   schedule:
-    - cron: "0 0 * * 0"
+    - cron: '* * * * *'
 
 jobs:
   download_icons:
