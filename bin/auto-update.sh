@@ -2,7 +2,8 @@
 
 set -e
 
-repo_url="https://github.com/tabler/tabler-icons/archive/master.zip"
+latest_release_url=$(curl -s https://api.github.com/repos/tabler/tabler-icons/releases/latest | grep browser_download_url | cut -d '"' -f 4)
+repo_url="${latest_release_url}"
 extract_dir="resources/svg/"
 temp_zip="tabler-icons-master.zip"
 
