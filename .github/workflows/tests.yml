@@ -13,8 +13,11 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [8.1]
-        laravel: [10.0]
+        php: [ 8.1, 8.2 ]
+        laravel: [ 10.*, 11.* ]
+        exclude:
+          - php: 8.1
+            laravel: 11.*
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }}
 
@@ -39,4 +42,4 @@ jobs:
         run: composer require "illuminate/contracts=${{ matrix.laravel }}" --prefer-dist --no-interaction --no-suggest
 
       - name: Execute tests
-        run: vendor/bin/phpunit --verbose
+        run: vendor/bin/phpunit
