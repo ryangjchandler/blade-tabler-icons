@@ -16,6 +16,7 @@
             "role": "Developer"
         }
     ],
+    "abandoned": "secondnetwork/blade-tabler-icons",
     "require": {
         "php": "^8.1",
         "blade-ui-kit/blade-icons": "^1.5",
