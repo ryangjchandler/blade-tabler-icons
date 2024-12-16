@@ -1,5 +1,8 @@
 # Blade Tabler Icons
 
+> [!WARNING]
+> This package is no longer maintained. I recommend migrating to [secondnetwork/blade-tabler-icons](https://github.com/secondnetwork/blade-tabler-icons) which provides the same set of icons.
+
 <a href="https://github.com/ryangjchandler/blade-tabler-icons/actions?query=workflow%3ATests">
     <img src="https://github.com/ryangjchandler/blade-tabler-icons/workflows/Tests/badge.svg" alt="Tests">
 </a>
